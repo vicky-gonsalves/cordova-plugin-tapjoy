@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-tapjoy" version="1.0">
+
+
+    <name>CordovaTapjoy</name>
+    <description>This is a cordova plugin to use Tapjoy.</description>
+    <license>MIT</license>
+    <keywords>cordova, ionic, tapjoy, android</keywords>
+
+    <js-module src="www/CordovaTapjoy.js" name="CordovaTapjoy">
+        <clobbers target="cordova.plugins.cordovaTapjoy"/>
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaTapjoy">
+                <param name="android-package" value="vickygonsalves.CordovaTapjoy"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CordovaTapjoy.java" target-dir="src/vickygonsalves/cordovatapjoy"/>
+
+    </platform>
+
+</plugin>
